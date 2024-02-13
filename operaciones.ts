@@ -30,6 +30,23 @@ class Operaciones {
         return this.numero1+this.numero2
 
     }
+    resta(): number {
+        return this.numero1-this.numero2
+
+    }
+    multiplicacion(): number {
+        return this.numero1*this.numero2
+
+    }
+
+    division(): number {
+        if (this.numero2 === 0) {
+            throw new Error("No se puede dividir por cero");
+        }
+        return this.numero1 / this.numero2;
+    }
+    
+
    
 
 }
@@ -37,3 +54,6 @@ class Operaciones {
 const operacion = new Operaciones(10,5);
 
 console.log("el resultado de la suma es :", operacion.suma());
+console.log("el resultado de la resta es :"+ operacion.resta());
+console.log("el resultado de la multiplicacion  es :"+ operacion.multiplicacion());
+console.log("el resultado de la divicion es :"+ operacion.division());
